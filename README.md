@@ -6,4 +6,4 @@
 
 ## Screenshot :
 
-<img src="screenshot.png">
+<img src="screencapture-minhaj-313-github-io-linktree-.png">
