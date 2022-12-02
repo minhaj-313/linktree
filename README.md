@@ -2,7 +2,7 @@
 
 ### Design and Developed by minhaj-313.
 
-### Demo : [link](https://minhaj-313.github.io/linktree/)
+### Demo : [linktree website](https://minhaj-313.github.io/linktree/)
 
 ## Screenshot :
 
