@@ -1,0 +1,39 @@
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.1;
+}
+
+body{
+    position: relative;
+    background-color: var(--primarycolor);
+    font-family: var(--plus);
+    overflow-x: hidden;
+}
+
+h1,h2,h3{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@600;800&display=swap");
+:root {
+  --primarycolor:hsl(277, 100%, 93%);
+  --secondarycolor:hsl(268, 84%, 61%);
+  --graycolor:hsl(0, 0%, 100%);
+  --hovercolor:hsl(267, 31%, 76%);
+  --hovercolor2:hsl(0, 0%, 95%);
+  --white:hsl(0, 0%, 0%);
+  --paragraphcolor:hsl(278, 10%, 31%);
+  --bebas: "Bebas Neue",cursive;
+  --plus: "Plus Jakarta Sans",sans-serif;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.1;
+}
+
+body {
+  position: relative;
+  background-color: var(--primarycolor);
+  font-family: var(--plus);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80rem;
+}
+header nav {
+  margin: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+header nav .left {
+  width: 3.5rem;
+}
+header nav .right {
+  font-family: var(--bebas);
+}
+header nav .right a {
+  color: var(--secondarycolor);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 350ms ease-in;
+}
+header nav .right a:hover {
+  background-color: var(--hovercolor2);
+}
+
+.main-text h1 {
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  color: var(--secondarycolor);
+  font-size: 15rem;
+  transform: rotate(90deg);
+  opacity: 5%;
+  z-index: 1;
+}
+@media (max-width: 1275px) {
+  .main-text {
+    display: none;
+  }
+}
+
+.profilecard {
+  z-index: 600;
+  position: relative;
+  width: 100%;
+  max-width: 80rem;
+  margin: 5rem auto;
+}
+.profilecard .container {
+  margin: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  color: var(--white);
+  background-color: var(--graycolor);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.profilecard .container .text {
+  margin: 1rem 0;
+}
+.profilecard .container .text h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.profilecard .container .text p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--paragraphcolor);
+}
+.profilecard .container .text p span {
+  font-weight: 800;
+  color: var(--secondarycolor);
+  letter-spacing: 1px;
+}
+.profilecard .container .image {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.profilecard .container .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 521px) {
+  .profilecard .container {
+    grid-template-columns: 1fr;
+  }
+  .profilecard .container .image {
+    grid-row-start: 1;
+  }
+}
+
+.links {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.links .container {
+  margin: 0 2rem;
+}
+.links .container .heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondarycolor);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right;
+}
+.links .container .cards {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 2rem;
+}
+.links .container .cards .card {
+  background-color: var(--graycolor);
+  color: var(--white);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 350ms ease-out;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.links .container .cards .card img {
+  width: 8rem;
+  background-color: var(--primarycolor);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.links .container .cards .card .blue {
+  background-color: var(--secondarycolor);
+}
+.links .container .cards .card .text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.links .container .cards .card .text h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.links .container .cards .card .text p {
+  font-size: 1.5rem;
+  color: var(--paragraphcolor);
+  line-height: 1.5;
+}
+.links .container .cards .card:hover {
+  transform: scale(1.05);
+}
+.links .container .cards .card:hover img {
+  background-color: var(--hovercolor2);
+}
+.links .container .cards .card:hover .blue {
+  background-color: var(--hovercolor);
+}
+.links .container .cards .card:hover .text h1 {
+  color: var(--secondarycolor);
+}
+@media (max-width: 630px) {
+  .links .container .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(268, 84%, 61%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(268, 100%, 24%);
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+footer a {
+  font-size: 1.2rem;
+  color: var(--white);
+  
+}/*# sourceMappingURL=style.css.map */

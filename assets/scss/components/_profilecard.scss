@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+
+
+.main-text{
+    h1{
+        position: absolute;
+        top: 30%;
+        left: -10%;
+        color: var(--secondarycolor);
+        font-size: 15rem;
+        transform: rotate(90deg);
+        opacity: 5%;
+        z-index: 1;
+    }
+
+    @media (max-width:1275px){
+        display: none;
+    }
+}
+
+.profilecard{
+    z-index: 600;
+    position: relative;
+    width: 100%;
+    max-width: 80rem ;
+    margin: 5rem auto; 
+
+    .container{
+        margin: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        color: var(--white);
+        background-color: var(--graycolor);
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        .text{
+            margin: 1rem 0;
+            h1{
+                font-size: 3rem;
+                letter-spacing: 1px;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                font-size: 2rem;
+                font-weight: 400;
+                color: var(--paragraphcolor);
+
+                span{
+                    font-weight: 800;
+                    color: var(--secondarycolor);
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .image{
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media (max-width:521px){
+            grid-template-columns: 1fr;
+
+            .image{
+                grid-row-start: 1;
+            }
+        }
+    }
+}
